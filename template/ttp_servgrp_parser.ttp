@@ -1,0 +1,9 @@
+<group name="servgrp">
+config firewall service group{{ _start_ }}
+    <group>
+    edit "{{ name | ORPHRASE }}"
+        set member {{ members | ORPHRASE | to_list }}
+        set comment "{{ comment }}"
+    </group>
+end{{ _end_ }}
+</group>

@@ -1,0 +1,10 @@
+<group name="usergroup">
+config user group{{ _start_ }}
+    <group>
+    edit "{{ name | ORPHRASE }}"
+        set group-type {{ group_type }}
+        set member "{{ members | ORPHRASE | to_list }}"
+        set comment "{{ comment }}"
+    </group>
+end{{ _end_ }}
+</group>

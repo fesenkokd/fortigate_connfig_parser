@@ -1,0 +1,10 @@
+<group name="service">
+config firewall service custom{{ _start_ }}
+    <group>
+    edit "{{ name }}"
+        set tcp-portrange {{ tcp_port | to_list }}
+        set udp-portrange {{ udp_port | ORPHRASE | to_list }}
+        set comment "{{ comment }}"
+    </group>
+end{{ _end_ }}
+</group>

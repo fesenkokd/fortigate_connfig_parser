@@ -1,0 +1,3 @@
+*.txt
+*.yml
+*__pycache__/*

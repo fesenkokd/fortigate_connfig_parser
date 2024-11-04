@@ -1,0 +1,13 @@
+<vars>
+OBJECT_TYPE="group"
+</vars>
+<group name="addrgrp">
+config firewall addrgrp{{ _start_ }}
+    <group>
+    edit "{{ name | ORPHRASE }}"
+        set member {{ members | ORPHRASE | to_list }}
+        set comment "{{ comment }}"
+        {{ object_type | set("OBJECT_TYPE") }}
+    </group>
+end{{ _end_ }}
+</group>

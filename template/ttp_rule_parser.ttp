@@ -1,0 +1,17 @@
+<group name="rules" contains="src_intf" >
+config firewall policy{{ _start_ }}
+    <group>
+    edit {{ rule_id | DIGIT}}
+        set name "{{ name }}"
+        set srcintf {{ src_intf | ORPHRASE | to_list }}
+        set dstintf {{ dst_intf | ORPHRASE | to_list }}
+        set action {{ rule_action }}
+        set srcaddr {{ src_address | ORPHRASE | to_list }}
+        set dstaddr {{ dst_address | ORPHRASE | to_list }}
+        set schedule "{{ rule_schedule }}"
+        set service {{ dst_service | ORPHRASE | to_list }}
+        set comments "{{ rule_comment }}"
+        set global-label "{{ rule_label | ORPHRASE | record(rule_label) | default(rule_label)}}"
+    </group>
+end{{ _end_ }}
+</group>

@@ -1,0 +1,12 @@
+<group name="address">
+config firewall address{{ _start_ }}
+    <group>
+    edit "{{ name | ORPHRASE }}"
+        set type {{ object_type }}
+        set start-ip {{ start_ip | IP }}
+        set end-ip {{ end_ip | IP }}
+        set fqdn "{{ fqdn | ORPHRASE }}"
+        set subnet {{ prefix }} {{ mask }}
+    </group>
+end{{ _end_ }}
+</group>
