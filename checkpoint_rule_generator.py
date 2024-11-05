@@ -346,7 +346,7 @@ if __name__ == "__main__":
     main(vrf_name="VRF_DB")
     # main(vrf_name)
     # _file_write({"name3": "val3"}, "address")
-    # file = "fg-conf.txt"
+    file = "fg-conf.txt"
     # with open(file, "r", encoding="utf-8") as f:
     #    config = f.read()
     # parsed_res = FortiParser(config)
